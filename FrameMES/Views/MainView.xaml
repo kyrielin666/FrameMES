@@ -4,13 +4,84 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FrameMES.Views"
-        mc:Ignorable="d"
+mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        FontFamily="Microsofrt YaHei"
+        FontFamily="Microsoft YaHei"
         Foreground="#333"
         Background="#F7F9FA"
-        Title="MainView" Height="750" Width="1300">
+        Title="Zhaoxi.MES" Height="750" Width="1300">
+    <WindowChrome.WindowChrome>
+        <WindowChrome NonClientFrameEdges="None" 
+                  UseAeroCaptionButtons="False"/>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <ResourceDictionary Source="/MES.Assents;component/Styles/ButtonStyles.xaml"/>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Path Data="M0,0 L0,33 
+              L166,33A10 10 0 0 0 175 31
+              L186,10A15 10 0 0 1 200 5
+              L880,5 880,0 z" 
+              StrokeThickness="1" Stretch="UniformToFill">
+            <Path.Fill>
+                <RadialGradientBrush RadiusX="0.6" RadiusY="1.8" 
+                                     Center="0.5,1.8" GradientOrigin="0.5,1.5">
+                    <GradientStop Color="#409EFE" Offset="0"/>
+                    <GradientStop Color="#3269DE" Offset="1"/>
+                </RadialGradientBrush>
+            </Path.Fill>
+            <Path.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="2" 
+                                  Direction="270" Color="Black" Opacity="0.2"/>
+            </Path.Effect>
+        </Path>
+
+        <TextBlock Text="工厂智能制造MES系统" 
+                   Foreground="White" FontWeight="Bold"
+                   VerticalAlignment="Center" HorizontalAlignment="Left" Margin="45,0,0,0"
+                   FontSize="14"/>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center"
+                    Margin="280,0,0,0" HorizontalAlignment="Left">
+            <TextBlock Text="&#xe678;" FontSize="24" Foreground="#6590C1"
+                       FontFamily="{StaticResource a}">
+                <TextBlock.RenderTransform>
+                    <ScaleTransform ScaleX="0.8"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+
+            <TextBlock VerticalAlignment="Center" Margin="10,0" Foreground="#886590C1" FontSize="12">
+                <Run Text="MES"/>
+                <Run Text="/"/>
+                <Run Text="生产统计"/>
+                <Run Text="/"/>
+                <Run Text="设备看板" Foreground="#FF6590C1"/>
+            </TextBlock>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" 
+            HorizontalAlignment="Right" Margin="5,0"
+            TextBlock.Foreground="#FF6590C1">
+            <TextBlock Text="&#xe740;" FontFamily="{StaticResource a}"
+                       FontSize="18" VerticalAlignment="Center"/>
+            <TextBlock Text="&#xe693;" FontFamily="{StaticResource a}"
+                       FontSize="18" Margin="10,0" VerticalAlignment="Center"/>
+            <Border Width="22" Height="22" CornerRadius="11" Margin="10,0">
+                <Border.Background>
+                    <ImageBrush ImageSource="/MES.Assents;component/Images/a01.jpg" Stretch="Fill"/>
+                </Border.Background>
+            </Border>
+
+            <Button Content="&#xe624;" Style="{StaticResource ControlButtonStyle}"/>
+            <Button Content="&#xe600;" Style="{StaticResource ControlButtonStyle}"/>
+            <Button Content="&#xe609;" Style="{StaticResource ControlButtonStyle}"
+                    Click="Button_Click"/>
+        </StackPanel>
+
     </Grid>
 </Window>

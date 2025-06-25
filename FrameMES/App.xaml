@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:FrameMES"
              xmlns:p="http://prismlibrary.com/">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <FontFamily x:Key="a">pack://Application:,,,/MES.Assents;component/Fonts/iconfont.ttf#iconfont</FontFamily>
+                </ResourceDictionary>
+                <ResourceDictionary Source="/MES.Assents;component/Styles/ButtonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+     
     </Application.Resources>
 </p:PrismApplication>

@@ -17,4 +17,8 @@
     <PackageReference Include="Prism.Unity" Version="9.0.537" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MES.Assents\MES.Assents.csproj" />
+  </ItemGroup>
+
 </Project>

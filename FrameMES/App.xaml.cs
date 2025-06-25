@@ -17,7 +17,7 @@ namespace FrameMES
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+            //ioc对象注册
         }
     }
  

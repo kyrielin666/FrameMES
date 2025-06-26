@@ -100,7 +100,7 @@ mc:Ignorable="d"
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
                             <TextBlock Text="{Binding Icon}" FontFamily="{StaticResource a}"
-                                       HorizontalAlignment="Center" FontSize="20"
+                                       HorizontalAlignment="Center" FontSize="2"
                                        Margin="0,5"/>
                             <TextBlock Text="{Binding Header}" Grid.Row="1" 
                                        HorizontalAlignment='Center' Margin="0,3"
